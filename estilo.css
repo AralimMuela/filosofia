@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --fondo: #f8f6f1;
+    --texto: #29283b;
+    --secundario: #777487;
+    --violeta: #7764a8;
+    --violeta-claro: #e9e3f3;
+    --blanco: #ffffff;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+
+.portada {
+    min-height: 620px;
+    background: linear-gradient(135deg, #29283b, #4d456b);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 9%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.enlaces {
+    display: flex;
+    gap: 28px;
+}
+
+.enlaces a {
+    color: #e4e0ee;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.enlaces a:hover {
+    color: #d2baff;
+}
+
+.contenido-portada {
+    max-width: 760px;
+    padding: 110px 9% 120px;
+    position: relative;
+    z-index: 1;
+}
+
+.etiqueta {
+    color: var(--violeta);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.portada .etiqueta {
+    color: #d2baff;
+}
+
+h1 {
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.12;
+    margin-bottom: 25px;
+}
+
+h1 span {
+    color: #d2baff;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.descripcion {
+    color: #d9d6e4;
+    max-width: 520px;
+    margin-bottom: 35px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background-color: #d2baff;
+    color: #29283b;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+    background-color: white;
+}
+
+.decoracion {
+    position: absolute;
+    right: 10%;
+    bottom: -120px;
+    font-family: Georgia, serif;
+    font-size: 450px;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+
+.seccion {
+    padding: 100px 9%;
+}
+
+h2 {
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.texto-intro {
+    max-width: 760px;
+    color: var(--secundario);
+    font-size: 17px;
+    margin-bottom: 45px;
+}
+
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.tarjeta {
+    background-color: var(--blanco);
+    padding: 30px;
+    border: 1px solid #ebe7f0;
+    border-radius: 18px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(41, 40, 59, 0.08);
+}
+
+.icono {
+    font-size: 30px;
+    color: var(--violeta);
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.tarjeta p,
+.reflexion p {
+    color: var(--secundario);
+    font-size: 15px;
+}
+
+/* Frase destacada */
+
+.frase {
+    padding: 90px 12%;
+    text-align: center;
+    background-color: var(--violeta-claro);
+}
+
+.frase blockquote {
+    max-width: 850px;
+    margin: 0 auto 20px;
+    font-family: Georgia, serif;
+    font-size: clamp(25px, 4vw, 39px);
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.firma {
+    color: var(--secundario);
+    font-size: 14px;
+}
+
+/* Reflexiones personales */
+
+.reflexiones {
+    background-color: var(--blanco);
+}
+
+.reflexion {
+    display: flex;
+    gap: 25px;
+    max-width: 800px;
+    padding: 28px 0;
+    border-bottom: 1px solid #eeeaf3;
+}
+
+.numero {
+    color: var(--violeta);
+    font-family: Georgia, serif;
+    font-size: 27px;
+}
+
+.reflexion h3 {
+    margin-bottom: 8px;
+}
+
+.nota-personal {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 35px;
+    padding: 25px;
+    border-radius: 14px;
+    background-color: #f4f0fa;
+    color: #5b526e;
+}
+
+.nota-personal span {
+    color: var(--violeta);
+    font-size: 23px;
+}
+
+/* Preguntas */
+
+.preguntas {
+    padding: 100px 9%;
+}
+
+.preguntas h2 {
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+.pregunta {
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+    padding: 23px 0;
+    border-bottom: 1px solid #e4e0e9;
+}
+
+.pregunta span {
+    color: var(--violeta);
+    font-weight: bold;
+}
+
+.pregunta p {
+    font-size: 17px;
+}
+
+/* Encuesta */
+
+.encuesta {
+    padding: 90px 9%;
+    text-align: center;
+    background: linear-gradient(135deg, #29283b, #4d456b);
+    color: white;
+}
+
+.encuesta h2 {
+    max-width: 650px;
+    margin: 0 auto 20px;
+}
+
+.encuesta > p:not(.etiqueta):not(.aclaracion) {
+    max-width: 620px;
+    margin: 0 auto 30px;
+    color: #d9d6e4;
+}
+
+.encuesta .etiqueta {
+    color: #d2baff;
+}
+
+.boton-encuesta {
+    background-color: #d2baff;
+    margin-bottom: 15px;
+}
+
+.aclaracion {
+    color: #d9d6e4;
+    font-size: 13px;
+}
+
+/* Pie de página */
+
+footer {
+    padding: 35px 9%;
+    text-align: center;
+    background-color: #222131;
+    color: #c4c0d2;
+}
+
+footer .logo {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 13px;
+}
+
+.copyright {
+    margin-top: 12px;
+    color: #9994aa;
+}
+
+/* Adaptación a celulares */
+
+@media (max-width: 768px) {
+    .navegacion {
+        flex-direction: column;
+        gap: 18px;
+        padding: 22px 5%;
+    }
+
+    .enlaces {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .enlaces a {
+        font-size: 13px;
+    }
+
+    .contenido-portada {
+        padding: 90px 7%;
+    }
+
+    .decoracion {
+        right: -20px;
+        font-size: 280px;
+    }
+
+    .seccion,
+    .preguntas {
+        padding: 70px 7%;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta {
+        padding: 25px;
+    }
+
+    .frase {
+        padding: 70px 8%;
+    }
+
+    .reflexion {
+        gap: 15px;
+    }
+
+    .encuesta {
+        padding: 70px 7%;
+    }
+}
